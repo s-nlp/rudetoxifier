@@ -8,6 +8,7 @@ Olga Kozlova, Nikita Semenov, and Alexander Panchenko.
 ## Inference Example
 In `notebooks` you can find notebooks for detoxification models launch:
 - detoxGPT example [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1mc4Gn0bhFtACpqqFnzuz2L5NeTR8HXdP?usp=sharing)
+- condBERT example [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1yOL-GO22P5vEPxYQ_Wv-A0hvv3XJUw-r?usp=sharing)
 
 ***
 
