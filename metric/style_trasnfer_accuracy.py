@@ -1,5 +1,6 @@
 from tqdm import tqdm
 import os
+from settings.toxicity_classifier import *
 from deeppavlov.dataset_readers.basic_classification_reader import BasicClassificationDatasetReader
 from deeppavlov.dataset_iterators.basic_classification_iterator import BasicClassificationDatasetIterator
 from deeppavlov.models.preprocessors.bert_preprocessor import BertPreprocessor
@@ -8,10 +9,6 @@ from deeppavlov.models.classifiers.proba2labels import Proba2Labels
 from sklearn.metrics import accuracy_score
 
 prob2labels = Proba2Labels(max_proba=True)
-PRETR_BERT_PATH = "./ru_conversational_cased_L-12_H-768_A-12"
-N_CLASSES = 2
-BATCH_SIZE = 128
-THRESHOLD = 0.5
 
 def get_style_transfer_acc(results_csv_path):
     bert_preprocessor = BertPreprocessor(vocab_file=os.path.join(PRETR_BERT_PATH, "vocab.txt"),
