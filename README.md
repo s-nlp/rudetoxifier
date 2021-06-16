@@ -1,6 +1,7 @@
 # ruDetoxifier
 
-Code and data from the paper "Methods for De-toxification of Texts on Social Media for Russian Language".
+Code and data from the paper "Methods for Detoxification of Texts for the Russian Language" by Daryna Dementieva, Daniil Moskovskiy, Varvara Logacheva, David Dale,
+Olga Kozlova, Nikita Semenov, and Alexander Panchenko.
 
 ***
 
@@ -13,7 +14,7 @@ In `notebooks` you can find notebooks for detoxification models launch:
 ## Metrics
 
 Script `ru_metric.py` include all three parts of Automatic Evaluation:
-- style transfer accuracy (STA);
+- style transfer accuracy (STA): you can obtain toxicity classifier for the Russian language [here](https://drive.google.com/file/d/1hP820N3FddHJPSxM1BxMxV2N_NDfpjgo/view?usp=sharing);
 - content preservation (CS, BLEU, WO);
 - grammatically correctness (PPL);
 
