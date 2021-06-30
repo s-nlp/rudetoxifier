@@ -1,5 +1,4 @@
-from utils import *
-from tqdm import tqdm 
+from tqdm import tqdm
 import re
 import os
 
