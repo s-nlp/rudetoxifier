@@ -20,6 +20,7 @@ In our research we tested several approaches:
 
 ***
 ## Results
+
 |Method   |STA↑   |CS   |WO   |BLEU  |PPL  |GM   |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 |**Baselines**
@@ -39,6 +40,7 @@ In our research we tested several approaches:
 |DeepPavlov fine-tuned   |0.52   |0.86   |0.51   |0.53   |246.68   |0.12 ± 0.0007   |
 |Geotrend zero-shot   |0.62   |0.85   |0.54   |0.64   |237.46   |0.13 ± 0.0009   |
 |Geotrend fine-tuned   |0.66   |0.86   |0.54   |0.64   |209.95   |0.14 ± 0.0009   |
+
 ***
 
 ## Inference Example
@@ -66,3 +68,37 @@ Folder `data` consists of all used train datasets, test data and naive example o
 - `data/train`: RuToxic dataset, list of Russian rude words, and 200 samples of parallel sentences that were used for ruGPT fine-tuning;
 - `data/test`: 10,000 samples that were used for approaches evaluation;
 - `data/results`: example of style transfer output format illustrated with naive duplication.
+
+***
+
+## Citation
+
+If you find this repository helpful, feel free to cite our publication:
+
+```
+@article{DBLP:journals/corr/abs-2105-09052,
+  author    = {Daryna Dementieva and
+               Daniil Moskovskiy and
+               Varvara Logacheva and
+               David Dale and
+               Olga Kozlova and
+               Nikita Semenov and
+               Alexander Panchenko},
+  title     = {Methods for Detoxification of Texts for the Russian Language},
+  journal   = {CoRR},
+  volume    = {abs/2105.09052},
+  year      = {2021},
+  url       = {https://arxiv.org/abs/2105.09052},
+  archivePrefix = {arXiv},
+  eprint    = {2105.09052},
+  timestamp = {Mon, 31 May 2021 16:16:57 +0200},
+  biburl    = {https://dblp.org/rec/journals/corr/abs-2105-09052.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+```
+
+***
+
+## Contacts
+
+For any questions please contact: Daryna Dementieva via [email](mailto:daryna.dementieva@skoltech.ru) or [Telegram](https://t.me/dementyeva_ds)
