@@ -8,8 +8,15 @@ This repository contains models and evaluation methodology for the detoxificatio
 In our research we tested several approaches:
 
 ### Baselines
+- Duplicate: simple duplication of the input;
+- Delete: removal of rude and toxic from pre-defined [vocab](https://github.com/skoltech-nlp/rudetoxifier/blob/main/data/train/MAT_FINAL_with_unigram_inflections.txt);
+- Retrieve: retrieval based on cosine similarity between word embeddings from non-toxic part of [RuToxic](https://github.com/skoltech-nlp/rudetoxifier/blob/main/data/train/ru_toxic_dataset.csv) dataset;
 
 ### detoxGPT
+Based on [ruGPT](https://github.com/sberbank-ai/ru-gpts) models. This method requires [parallel dataset](https://github.com/skoltech-nlp/rudetoxifier/blob/main/data/train/dataset_200.xls) for training. We tested ***ruGPT-small***, ***ruGPT-medium*** and ***ruGPT-large*** models in several setups:
+- ***zero-shot***: the model is taken as is (with no fine-tuning). The input is a toxic sentence which we would like to detoxify prepended with the prefix “Перефразируй” (rus. Paraphrase) and followed with the suffix “>>>” to indicate the paraphrasing task
+- ***few-shot***: the model is taken as is. Unlike the previous scenario, we give a prefix consisting of a parallel dataset of toxic and neutral sentences.
+- ***fine-tuned***: the model is fine-tuned for the paraphrasing task on a parallel dataset.
 
 ### condBERT
 
