@@ -1,21 +1,11 @@
 import os
-import sys
 from condbert import CondBertRewriter
-from choosers import EmbeddingSimilarityChooser
 from multiword.masked_token_predictor_bert import MaskedTokenPredictorBert
 import torch
 from transformers import BertTokenizer, BertForMaskedLM
-import numpy as np
 import pickle
-from tqdm.auto import tqdm, trange
 
 import numpy as np
-
-from flair.data import Sentence
-from flair.embeddings import WordEmbeddings
-import gensim
-
-from importlib import reload
 
 BERT_WEIGHTS = 'ru_cond_bert_geotrend/checkpoint-9000/pytorch_model.bin'
 VOCAB_DIRNAME = 'ru_vocabularies_geotrend' 
