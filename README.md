@@ -4,7 +4,7 @@ This repository contains models and evaluation methodology for the detoxificatio
 
 ## Inference Example
 
-In this repository, we release two best models **detoxGPT** and **condBERT** (see [Methodology](https://github.com/skoltech-nlp/rudetoxifier#methodology) for more details). You can try detoxification inference example in this [notebook](https://github.com/skoltech-nlp/rudetoxifier/blob/main/notebooks/rudetoxifier_inference.ipynb) or in [![Open In Colab](https://colab.research.google.com/drive/1lSXh8PHGeKTLtuhxYCwHL74qG-V-pkLK?usp=sharing).
+In this repository, we release two best models **detoxGPT** and **condBERT** (see [Methodology](https://github.com/skoltech-nlp/rudetoxifier#methodology) for more details). You can try detoxification inference example in this [notebook](https://github.com/skoltech-nlp/rudetoxifier/blob/main/notebooks/rudetoxifier_inference.ipynb) or [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1lSXh8PHGeKTLtuhxYCwHL74qG-V-pkLK?usp=sharing).
 
 ***
 ## Methodology
@@ -43,12 +43,7 @@ Finally, **aggregation metric**: geometric mean between STA, CS and PPL.
 
 ### Launching
 
-Script `ru_metric.py` include all three parts of Automatic Evaluation:
-- style transfer accuracy (STA): you can obtain toxicity classifier for the Russian language [here](https://drive.google.com/file/d/1hP820N3FddHJPSxM1BxMxV2N_NDfpjgo/view?usp=sharing);
-- content preservation (CS, BLEU, WO);
-- grammatically correctness (PPL);
-
-Aggregation of metrics is calculated with GM.
+You can run [`ru_metric.py`](https://github.com/skoltech-nlp/rudetoxifier/blob/main/metrics/ru_metric.py) script or [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Zv6VsyRUet8ZhTpzzAoMBNdQ1MttxVOP?usp=sharing) example of sytle transfer automatic evaluation.
 
 ***
 
