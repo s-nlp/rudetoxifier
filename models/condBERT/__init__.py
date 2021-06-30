@@ -22,7 +22,7 @@ class condBERT:
         model = BertForMaskedLM.from_pretrained(model_name)
 
         if from_pretrained:
-            print('Loading pre-trained weights.')
+            print('Loading fine-tuned weights.')
             if not os.path.isdir(BERT_WEIGHTS.split('/')[0]):
                 os.system('gdown --id 1z5UlXYpZPBC0hlP6W8EMdcgCZmpO5lPg && unzip ru_cond_bert_geotrend.zip')
             
@@ -32,7 +32,7 @@ class condBERT:
         model.to(device);
             
         if not os.path.isdir(VOCAB_DIRNAME):
-            print('Loading pre-calculated vocabularies.')
+            print('Loading pre-calculated toxicity vocabularies.')
             os.system('gdown --id 1BZTmXqvJe-R0MzYbY6QD7KaySLiM38Em && unzip ru_vocabularies_geotrend.zip')
             
         with open(VOCAB_DIRNAME + "/negative-words.txt", "r") as f:

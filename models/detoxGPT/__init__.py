@@ -56,7 +56,7 @@ class detoxGPT:
         
         self.args.model_name_or_path = model_path
         if not os.path.isdir(self.args.model_name_or_path):
-            print('Loading pre-trained weights.')
+            print('Loading fine-tuned weights.')
             os.system('gdown --id 1RYUku5_MWXZF2xlIpOTZmi9_DH-SG0lz && mkdir rugpt3_large_200 && unzip rugpt3_large_200.zip -d ' + self.args.model_name_or_path)
         
         model_class, tokenizer_class = MODEL_CLASSES[self.args.model_type]
