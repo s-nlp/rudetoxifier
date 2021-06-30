@@ -43,7 +43,7 @@ Finally, **aggregation metric**: geometric mean between STA, CS and PPL.
 
 ### Launching
 
-You can run [`ru_metric.py`](https://github.com/skoltech-nlp/rudetoxifier/blob/main/metrics/ru_metric.py) script or [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Zv6VsyRUet8ZhTpzzAoMBNdQ1MttxVOP?usp=sharing) example of sytle transfer automatic evaluation.
+You can run [`ru_metric.py`](https://github.com/skoltech-nlp/rudetoxifier/blob/main/metrics/ru_metric.py) script for evaluation. The fine-tuned weights for toxicity classifier can be found [here](https://drive.google.com/file/d/1hP820N3FddHJPSxM1BxMxV2N_NDfpjgo/view?usp=sharing).
 
 ***
 
