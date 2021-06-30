@@ -20,6 +20,7 @@ In our research we tested several approaches:
 
 ***
 ## Results
+
 |Method   |STA↑   |CS   |WO   |BLEU  |PPL  |GM   |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 |**Baselines**
@@ -39,6 +40,7 @@ In our research we tested several approaches:
 |DeepPavlov fine-tuned   |0.52   |0.86   |0.51   |0.53   |246.68   |0.12 ± 0.0007   |
 |Geotrend zero-shot   |0.62   |0.85   |0.54   |0.64   |237.46   |0.13 ± 0.0009   |
 |Geotrend fine-tuned   |0.66   |0.86   |0.54   |0.64   |209.95   |0.14 ± 0.0009   |
+
 ***
 
 ## Inference Example
