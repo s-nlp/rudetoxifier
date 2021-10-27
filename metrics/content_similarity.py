@@ -1,14 +1,35 @@
 import numpy as np
 from tqdm import tqdm
 import gensim
+import os
+import wget
+import sys
+import shutil
 from ufal.udpipe import Model, Pipeline
 from sklearn.metrics.pairwise import cosine_similarity
 from nltk.translate.bleu_score import sentence_bleu
 from nltk.translate.bleu_score import corpus_bleu
 
-model = gensim.models.KeyedVectors.load('ru_fasttext/model.model')
-modelfile = 'udpipe_syntagrus.model'
-model_udpipe = Model.load(modelfile)
+DATA_DIR = "../data"
+
+fasttext_model_url = "http://vectors.nlpl.eu/repository/20/213.zip"
+fasttext_filename = "ru_fasttext/model.model"
+
+if not os.path.isfile(os.path.join(DATA_DIR, fasttext_filename)):
+    print("FastText model not found. Downloading...", file=sys.stderr)
+    wget.download(fasttext_model_url, out=DATA_DIR)
+    shutil.unpack_archive(os.path.join(DATA_DIR, fasttext_model_url.split("/")[-1]), os.path.join(DATA_DIR, "ru_fasttext/"))
+
+model = gensim.models.KeyedVectors.load(os.path.join(DATA_DIR, fasttext_filename))
+
+udpipe_model_url = "https://rusvectores.org/static/models/udpipe_syntagrus.model"
+udpipe_filename = udpipe_model_url.split("/")[-1]
+
+if not os.path.isfile(os.path.join(DATA_DIR, udpipe_filename)):
+    print("\nUDPipe model not found. Downloading...", file=sys.stderr)
+    wget.download(udpipe_model_url, out=DATA_DIR)
+
+model_udpipe = Model.load(os.path.join(DATA_DIR, udpipe_filename))
 process_pipeline = Pipeline(model_udpipe, 'tokenize', Pipeline.DEFAULT, Pipeline.DEFAULT, 'conllu')
 
 def tokenize(text, tags=False, lemmas=False):
