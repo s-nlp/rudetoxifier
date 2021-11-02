@@ -11,9 +11,8 @@ def classify_preds(args, preds):
     model = BertForSequenceClassification.from_pretrained('SkolkovoInstitute/russian_toxicity_classifier')
 
     for i in tqdm.tqdm(range(0, len(preds), args.batch_size)):
-        batch = pad_sequence([tokenizer.encode(text, return_tensors='pt').squeeze(dim=0) for text in preds[i:i + args.batch_size]],
-                             batch_first=True, padding_value=0)
-        result = model(batch)['logits'].argmax(1).float().data.tolist()
+        batch = tokenizer(preds[i:i + args.batch_size], return_tensors='pt', padding=True)
+        result = model(**batch)['logits'].argmax(1).float().data.tolist()
         results.extend([1 - item for item in result])
 
     return results
