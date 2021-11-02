@@ -24,19 +24,19 @@ if __name__ == "__main__":
 
     accuracy_by_sent = classify_preds(args, transferred_sentences)
     acc = np.mean(accuracy_by_sent)
-    results_file.write('Style transfer accuracy: ' + str(acc) + '\n')
+    results_file.write('Style_transfer_accuracy: ' + str(acc) + '\n')
     
     cs = get_cosine_sim_corpus(original_sentences, transferred_sentences)
-    results_file.write('Cosine similarity: ' + str(cs) + '\n')
+    results_file.write('Cosine_similarity: ' + str(cs) + '\n')
     
     wo = get_word_overlap_corpus(original_sentences, transferred_sentences)
-    results_file.write('Word Overlap: ' + str(wo) + '\n')
+    results_file.write('Word_Overlap: ' + str(wo) + '\n')
     
     ppl = get_gpt2_ppl_corpus(transferred_sentences)
     results_file.write('Perplexity: ' + str(ppl) + '\n')
     
     gm = get_gm(acc, cs, ppl)
-    results_file.write('Geometric mean: ' + str(gm) + '\n')
+    results_file.write('Geometric_mean: ' + str(gm) + '\n')
     
     bleu = calc_bleu(original_sentences, transferred_sentences)
     results_file.write('BLEU: ' + str(bleu) + '\n')
