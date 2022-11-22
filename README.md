@@ -7,7 +7,7 @@ This repository contains models and evaluation methodology for the detoxificatio
 In this repository, we release two best models **detoxGPT** and **condBERT** (see [Methodology](https://github.com/skoltech-nlp/rudetoxifier#methodology) for more details). You can try detoxification inference example in this [notebook](https://github.com/skoltech-nlp/rudetoxifier/blob/main/notebooks/rudetoxifier_inference.ipynb) or [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1lSXh8PHGeKTLtuhxYCwHL74qG-V-pkLK?usp=sharing).
 
 ## Interactive Demo
-Also, you can test our models via [web-demo](https://detoxifier.nlp.zhores.net/) or you can pour out your anger on our [Telegram bot](https://t.me/rudetoxifierbot).
+Also, you can test our models via [web-demo](https://detoxifier-nlp-zh.skoltech.ru/) or you can pour out your anger on our [Telegram bot](https://t.me/rudetoxifierbot).
 
 ***
 ## Methodology
