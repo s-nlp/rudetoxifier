@@ -113,4 +113,4 @@ If you find this repository helpful, feel free to cite our publication:
 
 ## Contacts
 
-For any questions please contact Daryna Dementieva via [email](mailto:daryna.dementieva@skoltech.ru) or [Telegram](https://t.me/dementyeva_ds).
+For any questions please contact Daryna Dementieva via [email](mailto:dardem96@gmail.com).
