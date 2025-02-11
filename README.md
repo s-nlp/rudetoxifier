@@ -88,24 +88,25 @@ Folder `data` consists of all used train datasets, test data and naive example o
 If you find this repository helpful, feel free to cite our publication:
 
 ```
-@article{DBLP:journals/corr/abs-2105-09052,
-  author    = {Daryna Dementieva and
-               Daniil Moskovskiy and
-               Varvara Logacheva and
-               David Dale and
-               Olga Kozlova and
-               Nikita Semenov and
-               Alexander Panchenko},
-  title     = {Methods for Detoxification of Texts for the Russian Language},
-  journal   = {CoRR},
-  volume    = {abs/2105.09052},
-  year      = {2021},
-  url       = {https://arxiv.org/abs/2105.09052},
-  archivePrefix = {arXiv},
-  eprint    = {2105.09052},
-  timestamp = {Mon, 31 May 2021 16:16:57 +0200},
-  biburl    = {https://dblp.org/rec/journals/corr/abs-2105-09052.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@article{DBLP:journals/mti/DementievaMLDKS21,
+  author       = {Daryna Dementieva and
+                  Daniil Moskovskiy and
+                  Varvara Logacheva and
+                  David Dale and
+                  Olga Kozlova and
+                  Nikita Semenov and
+                  Alexander Panchenko},
+  title        = {Methods for Detoxification of Texts for the Russian Language},
+  journal      = {Multimodal Technol. Interact.},
+  volume       = {5},
+  number       = {9},
+  pages        = {54},
+  year         = {2021},
+  url          = {https://doi.org/10.3390/mti5090054},
+  doi          = {10.3390/MTI5090054},
+  timestamp    = {Wed, 15 Dec 2021 10:31:28 +0100},
+  biburl       = {https://dblp.org/rec/journals/mti/DementievaMLDKS21.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
 }
 ```
 
